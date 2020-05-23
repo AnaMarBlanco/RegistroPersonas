@@ -1,0 +1,61 @@
+﻿<Window x:Class="Tarea2.UI.Registros.registroPersona"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tarea2.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Personas" Height="450" Width="300">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,10,0,0">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation ="Horizontal">
+                    <Label Content="PersonaId   "/>
+                    <TextBox x:Name="PersonaIdTextBox" Text="{Binding PersonaId}" Width="100" Height="18"/>
+                    <Button x:Name="BuscarButton" Margin="5,0" Click="BuscarButton_Click">
+                        <Label Content="Buscar"></Label>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Nombres    "/>
+                    <TextBox x:Name="NombreTextbox" Width="157" Height="18" Text="{Binding Nombre}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Nacimiento"/>
+                    <DatePicker x:Name="FechaNacDateTime" SelectedDate="{Binding FechaNacimiento}" Width="147"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Cedula        "/>
+                    <TextBox x:Name="CedulaTextbox" Width="155" Height="18" Text="{Binding Cedula}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Telefono     "/>
+                    <TextBox x:Name="TelefonoTextbox" Width="155" Height="18" Text="{Binding Telefono}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content=" Direccion   "/>
+                    <TextBox x:Name="DireccionTextBox" Width="155" Height="18" Text="{Binding Direccion}"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="NuevoButton" Margin="5,0" Click="NuevoButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Nuevo"/>
+                    </StackPanel>
+                   
+                </Button>
+                <Button x:Name="GuardarButton" Margin="5,0" Click="GuardarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Guardar"/>
+                    </StackPanel>
+                    
+                </Button>
+                <Button x:Name="EliminarButton" Margin="5,0" Click="EliminarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Eliminar"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
